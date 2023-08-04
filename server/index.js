@@ -6,6 +6,8 @@ import userRoutes from "./routes/users.js";
 import questionRoutes from "./routes/Questions.js";
 import answerRoutes from "./routes/Answers.js";
 import connectDB from "./connectMongoDb.js";
+import chatapi from "./routes/chat.js"
+import otpRoutes from "./routes/otp.js"
 
 dotenv.config();
 connectDB();
@@ -19,6 +21,8 @@ app.use(cors());
 app.use("/user", userRoutes);
 app.use("/questions", questionRoutes);
 app.use("/answer", answerRoutes);
+app.use("/chat", chatapi);
+app.use("/otp", otpRoutes);
 
 const PORT = process.env.PORT || 5000;
 

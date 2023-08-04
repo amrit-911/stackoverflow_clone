@@ -1,0 +1,35 @@
+POST http://localhost:5000/chat/prompt
+Content-Type: application/json
+
+{
+    "user":"amritssss",
+    "prompt":"hello ai bye"
+}
+
+
+### get chats
+POST http://localhost:5000/chat/data
+Content-Type: application/json
+
+{
+    "user":"amritssss"
+}
+
+
+### Send Otp 
+
+POST http://localhost:5000/otp/send-otp
+Content-Type: application/json
+
+{
+    "email" : "amritsuthar19@gmail.com"
+}
+
+### verify otp 
+POST http://localhost:5000/otp/verify-otp
+Content-Type: application/json
+
+{
+        "email" : "amritsuthar19@gmail.com",
+        "otp" :  "182561"
+}

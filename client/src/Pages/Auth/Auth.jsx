@@ -13,7 +13,7 @@ const Auth = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const handleSwitch = () => {
     setIsSignup(!isSignup);

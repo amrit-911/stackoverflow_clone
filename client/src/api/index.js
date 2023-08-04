@@ -1,7 +1,9 @@
 import axios from "axios";
 
+
 const API = axios.create({
-    baseURL: "https://stackoverflow-clone-server-yf5w.onrender.com",
+    // baseURL: "https://stackoverflow-clone-server-yf5w.onrender.com",
+    baseURL: "http://localhost:5000"
 });
 
 API.interceptors.request.use((req) => {
@@ -30,3 +32,9 @@ export const deleteAnswer = (id, answerId, noOfAnswers) =>
 
 export const getAllUsers = () => API.get("/user/getAllUsers");
 export const updateProfile = (id, updateData) => API.patch(`/user/update/${id}`, updateData)
+
+export const sendOtp = (otpData) => API.post("/otp/send-otp", otpData)
+export const verifyOtp = (otpData) => API.post("/otp/verify-otp", otpData)
+
+export const updateChat = (chatData) => API.post("/chat/prompt", chatData)
+export const getChat = (chatData) => API.post("/chat/data", chatData)
