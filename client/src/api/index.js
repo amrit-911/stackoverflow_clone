@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const API = axios.create({
-    // baseURL: "https://stackoverflow-clone-server-yf5w.onrender.com",
-    baseURL: "http://localhost:5000"
+    baseURL: "https://stackoverflow-clone-server-yf5w.onrender.com",
+    // baseURL: "http://localhost:5000"
 });
 
 API.interceptors.request.use((req) => {

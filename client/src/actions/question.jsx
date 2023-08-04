@@ -62,4 +62,4 @@ export const deleteAnswer = (id, answerId, noOfAnswers) => async(dispatch) => {
     } catch (error) {
         console.log(error);
     }
-};
+};  
